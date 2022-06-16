@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Todo app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <header class="flex">
+          <h1>Todo</h1>
+          <img src="images/icon-sun.svg" alt="light teme" />
+        </header>
 
-  Todo
+        <main class="todos">
+          <div class="todos_form flex">
+            <div class="btn btn-border-circle"></div>
+            <input type="text" />
+          </div>
 
-  <!-- Add dynamic number --> items left
+          <ul class="todos_list">
+            <li class="todos_todo-item flex">
+              <div class="btn btn-border-circle"></div>
+              <p>Complite JavaScript tutorial</p>
+            </li>
 
-  All
-  Active 
-  Completed
+            <li class="todos_todo-item flex">
+              <div class="btn btn-border-circle"></div>
+              <p>Complite JavaScript tutorial</p>
+            </li>
 
-  Clear Completed
+            <li class="todos_todo-item flex">
+              <div class="btn btn-border-circle"></div>
+              <p>Complite JavaScript tutorial</p>
+            </li>
 
-  Drag and drop to reorder list
+            <li class="todos_todo-item flex">
+              <div class="btn btn-border-circle"></div>
+              <p>Complite JavaScript tutorial</p>
+            </li>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <li class="todos_todo-item flex">
+              <div class="btn btn-border-circle"></div>
+              <p>Complite JavaScript tutorial</p>
+            </li>
+          </ul>
+
+          <div class="flex">
+            <p class="todos_todo-left">items left</p>
+            <div class="todos_status-buttons">
+              <button class="btn btn-small">All</button>
+              <button class="btn btn-small">Active</button>
+              <button class="btn btn-small">Completed</button>
+            </div>
+            <button class="btn btn-small">Clear Completed</button>
+          </div>
+          <p>Drag and drop to reorder list</p>
+        </main>
+      </div>
+    </div>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/yourusername">edo979</a>.
+      </div>
+    </footer>
+  </body>
 </html>
