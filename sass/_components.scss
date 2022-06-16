@@ -1,0 +1,30 @@
+.main-container {
+  background-color: gray;
+}
+
+.todos {
+  &_header,
+  &_footer {
+    --justify: space-between;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  p:last-of-type {
+    text-align: center;
+  }
+}
+
+.btn {
+  &-border-circle {
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+}
