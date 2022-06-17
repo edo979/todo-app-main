@@ -24,10 +24,14 @@
         color: hsl(220, 98%, 61%);
       }
     </style>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
     <div class="main-container">
-      <div class="todos container">
+      <div class="todos container" x-data="todosApp">
         <header class="todos_header flex">
           <h1>Todo</h1>
           <img src="images/icon-sun.svg" alt="light teme" />
@@ -89,5 +93,6 @@
         <a href="https://www.frontendmentor.io/profile/yourusername">edo979</a>.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
