@@ -27,8 +27,13 @@ body {
     --justify: space-between;
   }
 
+  &_header {
+    padding-top: 4.5rem;
+    color: $Very-Light-Gray;
+  }
+
   &_form {
-    margin: 2rem 0 1rem;
+    margin: 2.5rem 0 1.5rem;
     border-radius: $border-radius;
 
     button {
