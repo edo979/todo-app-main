@@ -8,10 +8,39 @@
     --justify: space-between;
   }
 
+  &_form {
+    margin: 2rem 0 1rem;
+    border-radius: $border-radius;
+
+    input {
+      width: 100%;
+      border: none;
+
+      color: inherit;
+      background-color: inherit;
+    }
+  }
+
+  &_form,
+  &_todo-item {
+    height: 60px;
+    padding-inline: 25px;
+    background-color: $Very-Dark-Desaturated-Blue;
+  }
+
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+
+  &_todo-item {
+    border-bottom: 1px solid $Very-Dark-Grayish-Blue-200;
+
+    &:first-of-type {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
   }
 
   p:last-of-type {
@@ -21,10 +50,10 @@
 
 .btn {
   &-border-circle {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 
-    border: 1px solid red;
+    border: 1px solid $Very-Dark-Grayish-Blue-200;
     border-radius: 50%;
   }
 }
