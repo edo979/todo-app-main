@@ -22,7 +22,8 @@
   }
 
   &_form,
-  &_todo-item {
+  &_todo-item,
+  &_footer {
     height: 60px;
     padding-inline: 25px;
     background-color: $Very-Dark-Desaturated-Blue;
@@ -46,14 +47,77 @@
   p:last-of-type {
     text-align: center;
   }
+
+  &_footer {
+    height: 50px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    font-size: var(--fs-200);
+    color: $Very-Dark-Grayish-Blue-300;
+  }
 }
 
 .btn {
+  cursor: pointer;
+
   &-border-circle {
+    position: relative;
     width: 25px;
     height: 25px;
-
     border: 1px solid $Very-Dark-Grayish-Blue-200;
     border-radius: 50%;
+
+    background-color: inherit;
+
+    &:hover,
+    &:focus-visible {
+      background: $active-gradient;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 1px;
+        border-radius: inherit;
+
+        background-color: $Very-Dark-Desaturated-Blue;
+      }
+    }
+
+    &.active {
+      background: $active-gradient;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+
+        background: $active-gradient;
+        background-image: url('../images/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+      }
+    }
+  }
+
+  &-small {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    font-weight: 700;
+    color: inherit;
+
+    background-color: transparent;
+
+    &.active {
+      color: $Bright-Blue;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $Light-Grayish-Blue-900;
+    }
   }
 }
