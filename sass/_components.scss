@@ -83,6 +83,17 @@ body {
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
     }
+
+    &.completed {
+      > p {
+        text-decoration: line-through;
+        color: $Very-Dark-Grayish-Blue-300;
+      }
+
+      .btn-border-circle {
+        @include active-circle-button;
+      }
+    }
   }
 
   &_footer {
@@ -130,10 +141,6 @@ body {
 
         background-color: $Very-Dark-Desaturated-Blue;
       }
-    }
-
-    &.active {
-      @include active-circle-button;
     }
   }
 
