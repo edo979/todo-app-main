@@ -41,6 +41,7 @@
           <form @submit.prevent="addTodo">
             <div class="todos_form flex">
               <button class="btn btn-border-circle"></button>
+
               <input
                 type="text"
                 placeholder="Create a new todo..."
@@ -50,13 +51,17 @@
           </form>
 
           <ul class="todos_list">
-            <template x-for="todo in todos" :key="todo.id">
-              <li class="todos_todo-item flex">
+            <template x-for="{isCompleted, text, id} in todos" :key="id">
+              <li
+                class="todos_todo-item flex"
+                :class="isCompleted && 'completed'"
+              >
                 <button
                   class="btn btn-border-circle"
-                  @click="todo.isCompleted = ! todo.isCompleted"
+                  @click="isCompleted = ! isCompleted"
                 ></button>
-                <p x-text="todo.text"></p>
+
+                <p x-text="text"></p>
               </li>
             </template>
           </ul>
