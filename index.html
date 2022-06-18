@@ -58,7 +58,7 @@
               >
                 <button
                   class="btn btn-border-circle"
-                  @click="isCompleted = ! isCompleted"
+                  @click="toggleIsCompleted(id)"
                 ></button>
 
                 <p x-text="text"></p>
@@ -67,7 +67,7 @@
           </ul>
 
           <div class="todos_footer flex">
-            <p class="todos_todo-left">items left</p>
+            <p class="todos_todo-left" x-text="todosLeft"></p>
             <div class="flex">
               <button class="btn btn-small active">All</button>
               <button class="btn btn-small">Active</button>
