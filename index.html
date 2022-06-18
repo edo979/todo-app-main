@@ -55,6 +55,7 @@
               <li
                 class="todos_todo-item flex"
                 :class="isCompleted && 'completed'"
+                x-show="filterTodos(isCompleted)"
               >
                 <button
                   class="btn btn-border-circle"
@@ -83,9 +84,27 @@
           <div class="todos_footer flex">
             <p class="todos_todo-left" x-text="todosLeft"></p>
             <div class="flex">
-              <button class="btn btn-small active">All</button>
-              <button class="btn btn-small">Active</button>
-              <button class="btn btn-small">Completed</button>
+              <button
+                class="btn btn-small active"
+                @click="showTodos = 'all'"
+                :class="{'active': showTodos == 'all'}"
+              >
+                All
+              </button>
+              <button
+                class="btn btn-small"
+                @click="showTodos = 'active'"
+                :class="{'active': showTodos == 'active'}"
+              >
+                Active
+              </button>
+              <button
+                class="btn btn-small"
+                @click="showTodos = 'completed'"
+                :class="{'active': showTodos == 'completed'}"
+              >
+                Completed
+              </button>
             </div>
             <button class="btn btn-small">Clear Completed</button>
           </div>

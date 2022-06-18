@@ -168,10 +168,6 @@ body {
 
     background-color: transparent;
 
-    &.active {
-      color: $Bright-Blue;
-    }
-
     &:hover,
     &:focus-visible {
       color: $Light-Grayish-Blue-900;
@@ -179,6 +175,16 @@ body {
       // for delete todo button
       svg path {
         fill: $Bright-Blue;
+      }
+    }
+
+    &.active {
+      color: $Bright-Blue;
+
+      &:hover,
+      &:focus-visible {
+        cursor: auto;
+        color: $Bright-Blue;
       }
     }
   }

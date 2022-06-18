@@ -4,6 +4,7 @@ document.addEventListener('alpine:init', () => {
     id: 0,
     newTodoText: '',
     todosLeft: 'All done', // init state
+    showTodos: 'all',
 
     getId() {
       return this.id++
@@ -58,6 +59,17 @@ document.addEventListener('alpine:init', () => {
       })
 
       this.updateTodosLeftText()
+    },
+
+    filterTodos(isCompleted) {
+      switch (this.showTodos) {
+        case 'active':
+          return isCompleted == false
+        case 'completed':
+          return isCompleted == true
+        default:
+          return true
+      }
     },
   }))
 })
