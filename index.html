@@ -39,35 +39,21 @@
 
         <main>
           <div class="todos_form flex">
-            <button class="btn btn-border-circle"></button>
-            <input type="text" placeholder="Create a new todo..." />
+            <button class="btn btn-border-circle" @click="addTodo"></button>
+            <input
+              type="text"
+              placeholder="Create a new todo..."
+              x-model="newTodoText"
+            />
           </div>
 
           <ul class="todos_list">
-            <li class="todos_todo-item flex">
-              <button class="btn btn-border-circle active"></button>
-              <p>Complite JavaScript tutorial</p>
-            </li>
-
-            <li class="todos_todo-item flex">
-              <div class="btn btn-border-circle"></div>
-              <p>Complite JavaScript tutorial</p>
-            </li>
-
-            <li class="todos_todo-item flex">
-              <div class="btn btn-border-circle"></div>
-              <p>Complite JavaScript tutorial</p>
-            </li>
-
-            <li class="todos_todo-item flex">
-              <div class="btn btn-border-circle"></div>
-              <p>Complite JavaScript tutorial</p>
-            </li>
-
-            <li class="todos_todo-item flex">
-              <div class="btn btn-border-circle"></div>
-              <p>Complite JavaScript tutorial</p>
-            </li>
+            <template x-for="todo in todos" :key="todo.id">
+              <li class="todos_todo-item flex">
+                <button class="btn btn-border-circle"></button>
+                <p x-text="todo.text"></p>
+              </li>
+            </template>
           </ul>
 
           <div class="todos_footer flex">
