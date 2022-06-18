@@ -77,7 +77,12 @@ body {
   }
 
   &_todo-item {
+    --justify: space-between;
     border-bottom: 1px solid $Very-Dark-Grayish-Blue-200;
+
+    > p {
+      flex-basis: 100%;
+    }
 
     &:first-of-type {
       border-top-left-radius: $border-radius;
@@ -149,6 +154,7 @@ body {
 
     font-weight: 700;
     color: inherit;
+    line-height: 1;
 
     background-color: transparent;
 
@@ -159,6 +165,11 @@ body {
     &:hover,
     &:focus-visible {
       color: $Light-Grayish-Blue-900;
+
+      // for delete todo button
+      svg path {
+        fill: $Bright-Blue;
+      }
     }
   }
 }
