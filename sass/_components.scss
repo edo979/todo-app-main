@@ -99,6 +99,16 @@ body {
         @include active-circle-button;
       }
     }
+
+    button:last-of-type {
+      display: none;
+    }
+
+    &:hover {
+      button:last-of-type {
+        display: block;
+      }
+    }
   }
 
   &_footer {
