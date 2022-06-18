@@ -48,6 +48,10 @@ document.addEventListener('alpine:init', () => {
       this.updateTodosLeftText()
     },
 
+    deleteCompletedTodos() {
+      this.todos = this.todos.filter((todo) => !todo.isCompleted)
+    },
+
     toggleIsCompleted(id) {
       this.todos = this.todos.map((todo) => {
         if (todo.id == id) {

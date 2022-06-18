@@ -106,7 +106,9 @@
                 Completed
               </button>
             </div>
-            <button class="btn btn-small">Clear Completed</button>
+            <button class="btn btn-small" @click="deleteCompletedTodos">
+              Clear Completed
+            </button>
           </div>
           <p class="todos_help-text">Drag and drop to reorder list</p>
         </main>
