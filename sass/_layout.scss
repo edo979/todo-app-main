@@ -13,3 +13,25 @@
   align-items: var(--align, center);
   gap: var(--gap, 1.5rem);
 }
+
+.todos {
+  &_footer {
+    display: grid;
+    row-gap: 1.5rem;
+
+    grid-template:
+      'todos-left . clear-completed'
+      'ctrl-btn ctrl-btn ctrl-btn'
+      / auto 1fr auto;
+  }
+
+  &_todo-left {
+    grid-area: todos-left;
+  }
+  &_ctrl-btn {
+    grid-area: ctrl-btn;
+  }
+  &_clear-completed {
+    grid-area: clear-completed;
+  }
+}

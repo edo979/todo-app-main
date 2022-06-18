@@ -81,9 +81,9 @@
             </template>
           </ul>
 
-          <div class="todos_footer flex">
+          <div class="todos_footer">
             <p class="todos_todo-left" x-text="todosLeft"></p>
-            <div class="flex">
+            <div class="todos_ctrl-btn flex">
               <button
                 class="btn btn-small active"
                 @click="showTodos = 'all'"
@@ -106,7 +106,10 @@
                 Completed
               </button>
             </div>
-            <button class="btn btn-small" @click="deleteCompletedTodos">
+            <button
+              class="todos_clear-completed btn btn-small"
+              @click="deleteCompletedTodos"
+            >
               Clear Completed
             </button>
           </div>
