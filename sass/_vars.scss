@@ -30,6 +30,7 @@ $Very-Dark-Grayish-Blue-200: hsl(237, 14%, 26%);
 $border-radius: 5px;
 
 @mixin active-circle-button {
+  border: 0;
   background: $active-gradient;
 
   &::after {
