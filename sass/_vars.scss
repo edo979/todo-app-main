@@ -5,11 +5,7 @@ $active-gradient: linear-gradient(
   135deg,
   hsl(192, 100%, 67%),
   hsl(280, 87%, 65%)
-); // Check Background:
-
-// ### Neutral
-
-// ### Light Theme
+); // Check button background:
 
 $Very-Light-Gray: hsl(0, 0%, 98%);
 
@@ -29,5 +25,11 @@ $border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center 56%;
     background-size: 50%;
+  }
+}
+
+@mixin mq() {
+  @media (min-width: 568px) {
+    @content;
   }
 }

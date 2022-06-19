@@ -28,7 +28,10 @@ body {
     padding-top: 2.5rem;
     color: $Very-Light-Gray;
 
-    img {
+    #theme-btn {
+      // image in theme file
+      width: 26px;
+      height: 26px;
       transform: scale(80%);
     }
   }

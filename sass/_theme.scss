@@ -20,3 +20,29 @@
     --clr-text-help: hsl(236, 9%, 61%);
   }
 }
+
+#theme-btn {
+  background-image: url('../images/icon-sun.svg');
+}
+
+.light {
+  .main-container {
+    &::after {
+      background-image: url('../images/bg-mobile-light.jpg');
+    }
+  }
+
+  #theme-btn {
+    background-image: url('../images/icon-moon.svg');
+  }
+}
+
+@include mq {
+  .light {
+    .main-container {
+      &::after {
+        background-image: url('../images/bg-desktop-light.jpg');
+      }
+    }
+  }
+}

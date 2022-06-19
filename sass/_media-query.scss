@@ -1,4 +1,4 @@
-@media (min-width: 568px) {
+@include mq {
   // Typography
   :root {
     --fs-500: 0.85rem;
@@ -39,7 +39,9 @@
     &_header {
       padding-top: 4.5rem;
 
-      img {
+      #theme-btn {
+        width: 26px;
+        height: 26px;
         transform: scale(100%);
       }
     }
