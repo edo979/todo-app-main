@@ -22,18 +22,15 @@ body {
 }
 
 .todos {
-  &_header,
-  &_footer {
-    --justify: space-between;
-  }
-
   &_header {
-    padding-top: 4.5rem;
+    --justify: space-between;
+
+    padding-top: 2.5rem;
     color: $Very-Light-Gray;
   }
 
   &_form {
-    margin: 2.5rem 0 1.5rem;
+    margin: 1.8rem 0 0.9rem;
     border-radius: $border-radius;
 
     button {
@@ -113,6 +110,7 @@ body {
 
   &_footer {
     --gap: 0.75rem;
+    --justify: center;
 
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
