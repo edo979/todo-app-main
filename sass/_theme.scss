@@ -1,0 +1,19 @@
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue-800: hsl(234, 39%, 85%);
+$Light-Grayish-Blue-900: hsl(236, 33%, 92%); // (hover)
+$Dark-Grayish-Blue-500: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue-300: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue-200: hsl(237, 14%, 26%);
+
+:root {
+  --background-color: $Very-Dark-Blue: hsl(235, 21%, 11%);
+  --todo-background: $$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+}
+
+.light {
+  :root {
+    --background-color: $Very-Dark-Blue: hsl(235, 21%, 11%);
+    --todo-background: $$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  }
+}
