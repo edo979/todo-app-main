@@ -171,6 +171,11 @@ body {
   padding: 0;
   margin: 0;
 
+  &-noborder {
+    background-color: transparent;
+    border: none;
+  }
+
   &-border-circle {
     flex-shrink: 0;
     position: relative;
