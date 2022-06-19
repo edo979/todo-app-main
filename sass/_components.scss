@@ -63,10 +63,9 @@ body {
   }
 
   &_form,
-  &_todo-item,
-  &_footer {
-    height: 60px;
-    padding-inline: 25px;
+  &_todo-item {
+    height: 50px;
+    padding-inline: 20px;
     background-color: $Very-Dark-Desaturated-Blue;
   }
 
@@ -113,7 +112,7 @@ body {
 
   &_footer {
     --gap: 0.75rem;
-    height: 50px;
+
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
 
@@ -137,8 +136,8 @@ body {
   &-border-circle {
     flex-shrink: 0;
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border: 1px solid $Very-Dark-Grayish-Blue-200;
     border-radius: 50%;
 

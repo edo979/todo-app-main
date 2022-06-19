@@ -1,0 +1,18 @@
+@media (min-width: 568px) {
+  .todos {
+    --gap: 1.5rem;
+
+    &_form,
+    &_todo-item {
+      height: 60px;
+      padding-inline: 25px;
+    }
+  }
+
+  .btn {
+    &-border-circle {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
