@@ -1,8 +1,9 @@
 @media (min-width: 568px) {
+  // Typography
   :root {
-    --fs-500: 1.05rem;
+    --fs-500: 0.8rem;
     --fs-400: 1rem;
-    --fs-300: 0.9rem;
+    --fs-300: 0.85rem;
     --fs-200: 0.8rem;
   }
 
@@ -11,6 +12,19 @@
     letter-spacing: 15px;
   }
 
+  // Layout
+  .todos {
+    &_footer {
+      display: flex;
+      justify-content: space-between;
+
+      > * {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  // Components
   .main-container {
     &::after {
       height: 300px;
@@ -24,21 +38,33 @@
 
     &_header {
       padding-top: 4.5rem;
+
+      img {
+        transform: scale(100%);
+      }
     }
 
     &_form {
-      margin: 2.5rem 0 1.5rem;
+      margin: 2.1rem 0 1.3rem;
     }
 
     &_form,
     &_todo-item {
-      height: 60px;
+      height: 65px;
     }
 
     &_form,
     &_todo-item,
     &_footer {
       padding-inline: 25px;
+    }
+
+    &_footer {
+      background-color: $Very-Dark-Desaturated-Blue;
+
+      > * {
+        padding-inline: 0;
+      }
     }
 
     &_todo-item {
@@ -53,6 +79,16 @@
           display: block;
         }
       }
+    }
+
+    &_clear-completed {
+      --fs-300: 0.85rem;
+    }
+
+    &_todo-left,
+    &_clear-completed,
+    &_ctrl-btn {
+      padding-block: 15px;
     }
   }
 

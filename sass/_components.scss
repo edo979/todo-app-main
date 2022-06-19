@@ -145,12 +145,12 @@ body {
   }
 
   &_todo-left,
-  &_clear-completed {
+  &_clear-completed,
+  &_ctrl-btn {
     padding-block: 16px;
   }
 
   &_ctrl-btn {
-    padding: 16px;
     border-radius: $border-radius;
 
     background-color: $Very-Dark-Desaturated-Blue;
