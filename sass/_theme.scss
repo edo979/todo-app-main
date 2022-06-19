@@ -3,14 +3,20 @@
   --background-color: hsl(235, 21%, 11%);
   --todo-background: hsl(235, 24%, 19%);
   --todo-border: hsl(237, 14%, 26%);
-  --clr-text-300: hsl(233, 14%, 35%);
-  --clr-text-400: hsl(234, 39%, 85%);
-  --clr-text-500: hsl(234, 11%, 52%);
-  --clr-text-900: hsl(236, 33%, 92%);
+  --clr-text-completed: hsl(233, 14%, 35%);
+  --clr-text-help: hsl(233, 14%, 35%);
+  --clr-text-normal: hsl(234, 39%, 85%);
+  --clr-text-interactive-el: hsl(234, 11%, 52%);
+  --clr-text-hover: hsl(236, 33%, 92%);
 
   .light {
     --background-color: hsl(236, 33%, 92%);
     --todo-background: hsl(0, 0%, 98%);
     --todo-border: hsl(233, 11%, 84%);
+    --clr-text-completed: hsl(233, 11%, 84%);
+    --clr-text-normal: hsl(235, 19%, 35%);
+    --clr-text-interactive-el: hsl(236, 9%, 61%);
+    --clr-text-hover: hsl(235, 19%, 35%);
+    --clr-text-help: hsl(236, 9%, 61%);
   }
 }

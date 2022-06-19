@@ -10,7 +10,10 @@
 html {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
-  color: var(--clr-text-400);
+}
+
+body {
+  color: var(--clr-text-normal);
 }
 
 h1 {
