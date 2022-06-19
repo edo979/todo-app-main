@@ -83,6 +83,7 @@
 
           <div class="todos_footer">
             <p class="todos_todo-left" x-text="todosLeft"></p>
+
             <div class="todos_ctrl-btn flex">
               <button
                 class="btn btn-small active"
@@ -106,13 +107,14 @@
                 Completed
               </button>
             </div>
-            <button
-              class="todos_clear-completed btn btn-small"
-              @click="deleteCompletedTodos"
-            >
-              Clear Completed
-            </button>
+
+            <div class="todos_clear-completed">
+              <button class="btn btn-small" @click="deleteCompletedTodos">
+                Clear Completed
+              </button>
+            </div>
           </div>
+
           <p class="todos_help-text">Drag and drop to reorder list</p>
         </main>
       </div>

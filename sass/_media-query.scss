@@ -5,6 +5,11 @@
     &_form,
     &_todo-item {
       height: 60px;
+    }
+
+    &_form,
+    &_todo-item,
+    &_footer {
       padding-inline: 25px;
     }
   }

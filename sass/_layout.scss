@@ -17,10 +17,10 @@
 .todos {
   &_footer {
     display: grid;
-    row-gap: 1.5rem;
+    row-gap: 0.9rem;
     align-items: center;
 
-    grid-template: 50px 50px / 1fr 1fr;
+    grid-template: auto 50px / 1fr 1fr;
   }
 
   &_todo-left {

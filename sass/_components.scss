@@ -66,6 +66,7 @@ body {
   &_todo-item {
     height: 50px;
     padding-inline: 20px;
+
     background-color: $Very-Dark-Desaturated-Blue;
   }
 
@@ -118,6 +119,39 @@ body {
 
     font-size: var(--fs-200);
     color: $Very-Dark-Grayish-Blue-300;
+  }
+
+  &_todo-left {
+    padding-inline-start: 20px;
+    padding-block: 14px;
+    border-bottom-left-radius: $border-radius;
+
+    line-height: 1.5;
+
+    background-color: $Very-Dark-Desaturated-Blue;
+  }
+
+  &_clear-completed {
+    width: 100%;
+    padding-inline-end: 20px;
+    padding-block: 14px;
+
+    border-bottom-right-radius: $border-radius;
+
+    background-color: $Very-Dark-Desaturated-Blue;
+
+    > button {
+      display: block;
+      margin-left: auto;
+      line-height: 1.5;
+    }
+  }
+
+  &_ctrl-btn {
+    padding: 20px 18px;
+    border-radius: $border-radius;
+
+    background-color: $Very-Dark-Desaturated-Blue;
   }
 
   &_help-text {
