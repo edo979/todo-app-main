@@ -80,6 +80,6 @@ document.addEventListener('alpine:init', () => {
 
 const changeThemeBtn = document.getElementById('theme-btn')
 
-document.body.addEventListener('click', (e) => {
+changeThemeBtn.addEventListener('click', (e) => {
   document.body.classList.toggle('light')
 })

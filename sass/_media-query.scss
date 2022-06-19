@@ -60,7 +60,7 @@
     }
 
     &_footer {
-      background-color: $Very-Dark-Desaturated-Blue;
+      background-color: var(--todo-background);
 
       > * {
         padding-inline: 0;

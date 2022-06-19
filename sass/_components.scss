@@ -1,5 +1,5 @@
 body {
-  background-color: $Very-Dark-Blue;
+  background-color: var(--background-color);
 }
 
 .main-container {
@@ -61,15 +61,21 @@ body {
 
   &_form input::placeholder,
   &_footer {
-    color: $Dark-Grayish-Blue-500;
+    color: var(--clr-text-500);
   }
 
   &_form,
   &_todo-item {
     height: 53px;
     padding-inline: 20px;
+  }
 
-    background-color: $Very-Dark-Desaturated-Blue;
+  &_form,
+  &_todo-item,
+  &_todo-left,
+  &_clear-completed,
+  &_ctrl-btn {
+    background-color: var(--todo-background);
   }
 
   ul {
@@ -80,7 +86,7 @@ body {
 
   &_todo-item {
     --justify: space-between;
-    border-bottom: 1px solid $Very-Dark-Grayish-Blue-200;
+    border-bottom: 1px solid var(--todo-border);
 
     > p {
       flex-basis: 100%;
@@ -95,7 +101,7 @@ body {
     &.completed {
       > p {
         text-decoration: line-through;
-        color: $Very-Dark-Grayish-Blue-300;
+        color: var(--clr-text-300);
       }
 
       .btn-border-circle {
@@ -124,8 +130,6 @@ body {
     border-bottom-left-radius: $border-radius;
 
     line-height: 1.5;
-
-    background-color: $Very-Dark-Desaturated-Blue;
   }
 
   &_clear-completed {
@@ -134,8 +138,6 @@ body {
     width: 100%;
     padding-inline-end: 20px;
     border-bottom-right-radius: $border-radius;
-
-    background-color: $Very-Dark-Desaturated-Blue;
 
     > button {
       display: block;
@@ -152,8 +154,6 @@ body {
 
   &_ctrl-btn {
     border-radius: $border-radius;
-
-    background-color: $Very-Dark-Desaturated-Blue;
   }
 
   &_help-text {
@@ -162,7 +162,7 @@ body {
     font-size: var(--fs-500);
     font-weight: 700;
     text-align: center;
-    color: $Very-Dark-Grayish-Blue-300;
+    color: var(--clr-text-300);
   }
 }
 
@@ -181,7 +181,7 @@ body {
     position: relative;
     width: 20px;
     height: 20px;
-    border: 1px solid $Very-Dark-Grayish-Blue-200;
+    border: 1px solid var(--todo-border);
     border-radius: 50%;
 
     background-color: inherit;
@@ -196,7 +196,7 @@ body {
         inset: 1px;
         border-radius: inherit;
 
-        background-color: $Very-Dark-Desaturated-Blue;
+        background-color: var(--todo-background);
       }
     }
   }
@@ -213,7 +213,7 @@ body {
 
     &:hover,
     &:focus-visible {
-      color: $Light-Grayish-Blue-900;
+      color: var(--clr-text-900);
 
       // for delete todo button
       svg path {
