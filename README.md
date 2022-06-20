@@ -42,6 +42,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- JavaScript Local Storage API
+- JavaScript Drag n Drop API
 - [Alpine](https://alpinejs.dev//) - JS library
 
 ## Author
