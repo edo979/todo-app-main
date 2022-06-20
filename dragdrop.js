@@ -1,6 +1,7 @@
 // listening events from Alpine
-window.addEventListener('todoListUpdate', () => {
+window.addEventListener('todoListUpdate', (e) => {
   const todos = document.querySelectorAll('.todos_todo-item')
+  todosList = e.detail.todosList
 
   todos.forEach((todo) => {
     todo.addEventListener('dragstart', dragStart)
@@ -11,10 +12,15 @@ window.addEventListener('todoListUpdate', () => {
   })
 })
 
+// set from eventListener above
+// Mutating this array cause Alpine render !!!
+// this array only change in dragDrop method belowe
+let todosList
+
 let startIndex, dropIndex
 
 function dragStart() {
-  startIndex = +this.dataset.id
+  startIndex = +this.closest('li').dataset.id
 }
 
 function dragEnter() {
@@ -29,7 +35,15 @@ function dragLeave() {
   this.closest('li').classList.remove('over')
 }
 
+// mutating array todosList cause Alpine re-render !!!
 function dragDrop() {
   dropIndex = this.dataset.id
   this.closest('li').classList.remove('over')
+
+  const dragIndexEl = todosList.findIndex((todo) => todo.id == startIndex)
+  const dropIndexEl = todosList.findIndex((todo) => todo.id == dropIndex)
+  const temp = { ...todosList[dragIndexEl] }
+
+  todosList[dragIndexEl] = todosList[dropIndexEl]
+  todosList[dropIndexEl] = temp
 }

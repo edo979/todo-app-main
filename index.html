@@ -52,7 +52,7 @@
 
           <ul
             class="todos_list"
-            x-init="$watch('todos', value => $dispatch('todoListUpdate'))"
+            x-init="$watch('todos', value => $dispatch('todoListUpdate', {todosList: todos}))"
           >
             <template x-for="{isCompleted, text, id} in todos" :key="id">
               <li
