@@ -1,13 +1,34 @@
-const todos = document.querySelectorAll('.todos_todo-item')
+// listening events from Alpine
+window.addEventListener('todoListUpdate', () => {
+  const todos = document.querySelectorAll('.todos_todo-item')
 
-todos.forEach((todo, index) => {
-  todo.addEventListener('dragstart', dragStart)
+  todos.forEach((todo) => {
+    todo.addEventListener('dragstart', dragStart)
+    todo.addEventListener('dragover', dragOver)
+    todo.addEventListener('dragend', dragDrop)
+    todo.addEventListener('dragenter', dragEnter)
+    todo.addEventListener('dragleave', dragLeave)
+  })
+
+  console.log(todos)
 })
 
 function dragStart() {
-  console.log(this)
+  console.log('start')
 }
 
-window.addEventListener('todoListUpdate', () =>
-  console.log('catch from Alpine')
-)
+function dragEnter() {
+  console.log('enter')
+}
+
+function dragOver() {
+  console.log(this.querySelector('p').innerText)
+}
+
+function dragLeave() {
+  console.log('leave')
+}
+
+function dragDrop() {
+  console.log('drop')
+}
