@@ -50,12 +50,17 @@
             </div>
           </form>
 
-          <ul class="todos_list">
+          <ul
+            class="todos_list"
+            x-init="$watch('todos', value => $dispatch('todoListUpdate'))"
+          >
             <template x-for="{isCompleted, text, id} in todos" :key="id">
               <li
                 class="todos_todo-item flex"
                 :class="isCompleted && 'completed'"
                 x-show="filterTodos(isCompleted)"
+                draggable="true"
+                :data-id="id"
               >
                 <button
                   class="btn btn-border-circle"
@@ -130,5 +135,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="dragdrop.js"></script>
   </body>
 </html>
