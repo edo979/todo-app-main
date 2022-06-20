@@ -60,13 +60,14 @@
                 :class="isCompleted && 'completed'"
                 x-show="filterTodos(isCompleted)"
                 :data-id="id"
+                draggable="true"
               >
                 <button
                   class="btn btn-border-circle"
                   @click="toggleIsCompleted(id)"
                 ></button>
 
-                <p x-text="text" draggable="true"></p>
+                <p x-text="text" draggable="false"></p>
 
                 <button class="btn btn-small" @click="deleteTodo(id)">
                   <svg

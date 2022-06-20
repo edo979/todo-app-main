@@ -5,30 +5,31 @@ window.addEventListener('todoListUpdate', () => {
   todos.forEach((todo) => {
     todo.addEventListener('dragstart', dragStart)
     todo.addEventListener('dragover', dragOver)
-    todo.addEventListener('dragend', dragDrop)
+    todo.addEventListener('drop', dragDrop)
     todo.addEventListener('dragenter', dragEnter)
     todo.addEventListener('dragleave', dragLeave)
   })
-
-  console.log(todos)
 })
 
+let startIndex, dropIndex
+
 function dragStart() {
-  console.log('start')
+  startIndex = +this.dataset.id
 }
 
 function dragEnter() {
-  console.log('enter')
+  this.closest('li').classList.add('over')
 }
 
-function dragOver() {
-  console.log(this.querySelector('p').innerText)
+function dragOver(e) {
+  e.preventDefault()
 }
 
 function dragLeave() {
-  console.log('leave')
+  this.closest('li').classList.remove('over')
 }
 
 function dragDrop() {
-  console.log('drop')
+  dropIndex = this.dataset.id
+  this.closest('li').classList.remove('over')
 }
