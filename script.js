@@ -6,6 +6,19 @@ document.addEventListener('alpine:init', () => {
     todosLeft: 'All done', // init state
     showTodos: 'all',
 
+    init() {
+      //localStorage.clear()
+      const todosData = localStorage.getItem('todosList')
+
+      if (todosData) {
+        const data = JSON.parse(todosData)
+
+        this.todos = data.todos
+        this.id = data.id
+        this.todosLeft = data.todosLeft
+      }
+    },
+
     getId() {
       return this.id++
     },
@@ -74,6 +87,17 @@ document.addEventListener('alpine:init', () => {
         default:
           return true
       }
+    },
+
+    saveToLS() {
+      localStorage.setItem(
+        'todosList',
+        JSON.stringify({
+          id: this.id,
+          todos: this.todos,
+          todosLeft: this.todosLeft,
+        })
+      )
     },
   }))
 })

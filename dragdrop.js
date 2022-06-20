@@ -1,3 +1,8 @@
+// set from eventListener above
+// Mutating this array cause Alpine render !!!
+// this array only change in dragDrop method belowe
+let todosList
+
 // listening events from Alpine
 window.addEventListener('todoListUpdate', (e) => {
   const todos = document.querySelectorAll('.todos_todo-item')
@@ -11,11 +16,6 @@ window.addEventListener('todoListUpdate', (e) => {
     todo.addEventListener('dragleave', dragLeave)
   })
 })
-
-// set from eventListener above
-// Mutating this array cause Alpine render !!!
-// this array only change in dragDrop method belowe
-let todosList
 
 let startIndex, dropIndex
 

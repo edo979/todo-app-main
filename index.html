@@ -31,7 +31,13 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="todos container" x-data="todosApp">
+      <div
+        class="todos container"
+        x-data="todosApp"
+        x-init="$nextTick(() => { 
+          $dispatch('todoListUpdate', {todosList: todos});
+        });"
+      >
         <header class="todos_header flex">
           <h1>Todo</h1>
           <button class="btn btn-noborder" id="theme-btn"></button>
@@ -52,7 +58,11 @@
 
           <ul
             class="todos_list"
-            x-init="$watch('todos', value => $dispatch('todoListUpdate', {todosList: todos}))"
+            x-init="$watch('todos', value => {
+              $dispatch('todoListUpdate', {todosList: todos});
+              saveToLS();
+            })
+            "
           >
             <template x-for="{isCompleted, text, id} in todos" :key="id">
               <li
